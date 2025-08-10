@@ -5,79 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nodum</title>
-
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./Images/Nodum Logo solo color sin slogan.png" width="150" height="60" alt="Nodum Logo">
+                </a>
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="./Images/Nodum Logo solo color sin slogan.png" width="150" height="60" alt="Nodum Logo">
-            </a>
-
-            <!-- Botón hamburguesa -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Menú -->
-            <div class="collapse navbar-collapse " id="navbarNav">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 containerNav">
-                    <li class="nav-item">
-                        <a class="nav-link active px-3" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3" href="#">Soluciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3" href="#">Planes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3" href="#">FAQs</a>
-                    </li>
-                </ul>
-                <div class="d-flex containerReg">
-                    <!-- Botón con dropdown de banderas -->
-                    <div class="btn d-flex align-items-center btnBanderas" 
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <button>
-                            <img width="35" height="30" src="https://img.icons8.com/emoji/48/argentina-emoji.png"
-                                alt="argentina-emoji" class="me-2" />
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <img width="35" height="30"
-                                        src="https://img.icons8.com/emoji/48/united-kingdom-emoji.png"
-                                        alt="united-kingdom-emoji" />
-                                </a>
-                            </li>
-
-                        </ul>
+                <!-- Menú -->
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 containerNav">
+                        <li class="nav-item">
+                            <a class="nav-link active px-3" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#">Soluciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#">Planes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#">FAQs</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex containerReg">
+                        <!-- Botón con dropdown de banderas -->
+                        <div class="btn d-flex align-items-center btnBanderas" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <button>
+                                <img width="35" height="30" src="https://img.icons8.com/emoji/48/argentina-emoji.png"
+                                    alt="argentina-emoji" class="me-2" />
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <img width="35" height="30"
+                                            src="https://img.icons8.com/emoji/48/united-kingdom-emoji.png"
+                                            alt="united-kingdom-emoji" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn  ">Registrarme </button>
+                        <button type="button" class="btn btn-primary ">Ingresar</button>
                     </div>
-                    <button type="button" class="btn  ">Registrarme </button>
-                    <button type="button" class="btn btn-primary ">Ingresar</button>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div>
-            <h1>Activá tus procesos.<br>Sin <span class="highlight">pedir permiso.</span></h1>
-            <p>La plataforma autogestionada para empresas que quieren simplificar, escalar y dejar de depender de
-                terceros.</p>
+        <!-- Hero -->
+        <section class="hero">
+            <div>
+                <h1>Activá tus procesos.<br>Sin <span class="highlight">pedir permiso.</span></h1>
+                <p>La plataforma autogestionada para empresas que quieren simplificar, escalar y dejar de depender de
+                    terceros.</p>
+            </div>
+        </section>
+    </header>
+    <main>
+        <div class="px-4 py-5 my-5 text-center"> 
+            <h2 class="display-5 fw-bold text-body-emphasis">Un ecosistema de soluciones activables según tu necesidad.
+            </h2>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">En Nodum, cada modulo es una herramienta independiente que podes activar cuando lo
+                    necesitas. Sin intermediaros, sin integraciones complejas, sin esperar permisos.</p>
+            </div>
         </div>
-    </section>
-
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
