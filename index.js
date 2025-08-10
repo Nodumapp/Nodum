@@ -68,3 +68,22 @@ btnsPlanes.forEach(btn => {
         btn.style.cursor = 'default';
     });
 });
+const planes = document.querySelectorAll('.plan');
+const botones = document.querySelectorAll('.btn-plan');
+
+botones.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    // Quitar selección de todos
+    planes.forEach((plan) => plan.classList.remove('selected'));
+    botones.forEach((b) => {
+      b.textContent = 'Seleccionar plan';
+      b.classList.remove('activo');
+    });
+
+    // Agregar selección al plan clickeado
+    const plan = btn.closest('.plan');
+    plan.classList.add('selected');
+    btn.textContent = 'Seleccionado';
+    btn.classList.add('activo');
+  });
+});

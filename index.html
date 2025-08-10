@@ -140,74 +140,86 @@
             </div>
         </section>
         <section>
-            <div class="switch-container mx-auto">
-    <button id="btnMensual" class="switch-btn active">Mensual</button>
-    <button id="btnAnual" class="switch-btn">Anual</button>
-  </div>
+            <div class="row g-2 justify-content-center">
+                <div class="col-12 col-md-auto">
+                    <button id="btnMensual" class="switch-btn active btn btn-lg w-100">Mensual</button>
+                </div>
+                <div class="col-12 col-md-auto">
+                    <button id="btnAnual" class="switch-btn btn btn-lg w-100">Anual</button>
+                </div>
+            </div>
 
-  <div class="switch-description" id="descAhorro">
-    <p>Ahorra un <span>35%</span></p>
-  </div>
 
-  <div class="plans-container">
-    <div class="plan" id="planBasico">
-      <h3>Básico</h3>
-      <div class="description">Ideal para empresas que quieren empezar a digitalizar procesos con un sistema autogestionado y sin complicaciones.</div>
-      <div class="price" id="precioBasico">$351.000</div>
-      <button id="btnBasico" class="btn-plan">Seleccionar plan</button>
-      <div class="btn-subtext"></div>
-      <div class="features">
-        <strong>Características</strong>
-        <ul>
-          <li>1 módulo activo</li>
-          <li>Hasta 3 usuarios.</li>
-          <li>Soporte por email.</li>
-          <li>Acceso a actualizaciones básicas.</li>
-          <li>Panel de control centralizado</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="plan popular" id="planPro">
-      <div class="popular-label" title="Popular">
-        <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-        Popular
-      </div>
-      <h3>Pro</h3>
-      <div class="description">Para empresas que necesitan más potencia, flexibilidad y herramientas para optimizar procesos y colaborar en equipo.</div>
-      <div class="price" id="precioPro">$468.000 ARS</div>
-      <button id="btnPro" class="btn-plan selected">Seleccionado</button>
-      <div class="btn-subtext">¡Contratar ahora!</div>
-      <div class="features">
-        <strong>Características</strong>
-        <ul>
-          <li>Hasta 5 módulos activos</li>
-          <li>10 usuarios incluidos.</li>
-          <li>Exportación de datos y reportes.</li>
-          <li>Soporte prioritario por chat y email.</li>
-          <li>Personalización básica de interfaz.</li>
-        </ul>
-      </div>
-    </div>
+            <div class="switch-description" id="descAhorro">
+                <p>Ahorra un <span>35%</span></p>
+            </div>
 
-    <div class="plan" id="planEmpresarial">
-      <h3>Empresarial</h3>
-      <div class="description">La experiencia completa de Nodum. Diseñada para organizaciones con necesidades de personalización avanzada.</div>
-      <div class="price" id="precioEmpresarial">$624.000 ARS</div>
-      <button id="btnEmpresarial" class="btn-plan">Seleccionar plan</button>
-      <div class="btn-subtext"></div>
-      <div class="features">
-        <strong>Características</strong>
-        <ul>
-          <li>Módulos ilimitados.</li>
-          <li>Usuarios ilimitados</li>
-          <li>Soporte 24/7 con gestor de cuenta asignado.</li>
-          <li>Onboarding y capacitación in company.</li>
-          <li>Exportaciones programadas: envío automático de reportes por email.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+            <div class="plans-container">
+                <div class="plan" id="planBasico">
+                    <h3>Básico</h3>
+                    <div class="description">Ideal para empresas que quieren empezar a digitalizar procesos con un
+                        sistema autogestionado y sin complicaciones.</div>
+                    <div class="price" id="precioBasico">$351.000</div>
+                    <button id="btnBasico" class="btn-plan">Seleccionar plan</button>
+                    <div class="btn-subtext"></div>
+                    <div class="features">
+                        <strong>Características</strong>
+                        <ul>
+                            <li>1 módulo activo</li>
+                            <li>Hasta 3 usuarios.</li>
+                            <li>Soporte por email.</li>
+                            <li>Acceso a actualizaciones básicas.</li>
+                            <li>Panel de control centralizado</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="plan popular" id="planPro">
+                    <div class="popular-label" title="Popular">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        Popular
+                    </div>
+                    <h3>Pro</h3>
+                    <div class="description">Para empresas que necesitan más potencia, flexibilidad y herramientas para
+                        optimizar procesos y colaborar en equipo.</div>
+                    <div class="price" id="precioPro">$468.000 ARS</div>
+                    <button id="btnPro" class="btn-plan selected">Seleccionado</button>
+                    <div class="btn-subtext">¡Contratar ahora!</div>
+                    <div class="features">
+                        <strong>Características</strong>
+                        <ul>
+                            <li>Hasta 5 módulos activos</li>
+                            <li>10 usuarios incluidos.</li>
+                            <li>Exportación de datos y reportes.</li>
+                            <li>Soporte prioritario por chat y email.</li>
+                            <li>Personalización básica de interfaz.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="plan" id="planEmpresarial">
+                    <h3>Empresarial</h3>
+                    <div class="description">La experiencia completa de Nodum. Diseñada para organizaciones con
+                        necesidades de personalización avanzada.</div>
+                    <div class="price" id="precioEmpresarial">$624.000 ARS</div>
+                    <button id="btnEmpresarial" class="btn-plan">Seleccionar plan</button>
+                    <div class="btn-subtext"></div>
+                    <div class="features">
+                        <strong>Características</strong>
+                        <ul>
+                            <li>Módulos ilimitados.</li>
+                            <li>Usuarios ilimitados</li>
+                            <li>Soporte 24/7 con gestor de cuenta asignado.</li>
+                            <li>Onboarding y capacitación in company.</li>
+                            <li>Exportaciones programadas: envío automático de reportes por email.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
