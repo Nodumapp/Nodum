@@ -1,0 +1,97 @@
+ body {
+     background: url("./Images/Wallpaper\ white\ .jpg") no-repeat center center/cover;
+     margin: 0;
+     padding: 0;
+ }
+
+ /* Navbar sticky con rectángulo blanco */
+ header {
+     top: 0;
+     background: white;
+     border-radius: 0 0 12px 12px;
+     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+     z-index: 1000;
+     padding: 10px 20px;
+ }
+
+ /* Links de navegación */
+ .nav-link {
+     color: black;
+     border-radius: 8px;
+     transition: all 0.3s ease;
+ }
+
+ .containerNav {
+     position: sticky;
+     background-color: #ffffff;
+     border: solid 0.5px;
+     border-radius: 10px;
+     border-color: #8a94a6;
+ }
+
+ .containerReg {
+     position: sticky;
+     background-color: #ffffff;
+     border: solid 0.5px;
+     border-radius: 10px;
+     border-color: #8a94a6;
+ }
+
+ .nav-link:hover {
+     background-color: #e9fdf7;
+     color: #00d6a3;
+ }
+
+ /* Botones */
+ .btn-outline-primary {
+     background: white;
+     border: 1px solid #ddd;
+     color: black;
+ }
+
+ .btn-primary {
+     background: black;
+     border: none;
+ }
+
+ .btn-primary:hover {
+     background: #00d6a3 !important;
+ }
+
+
+ /* Hero Section */
+ .hero {
+     height: 90vh;
+     display: flex;
+     align-items: center;
+     padding-left: 5%;
+     max-width: 800px;
+ }
+
+ .hero h1 {
+     font-size: 3rem;
+     font-weight: bold;
+ }
+
+ .highlight {
+     background: #00d6a3;
+     color: white;
+     padding: 0 6px;
+     border-radius: 4px;
+ }
+
+ .hero p {
+     font-size: 1.1rem;
+     margin-top: 10px;
+     color: #444;
+ }
+
+ .btnBanderas>button {
+     border: none;
+     background: transparent;
+     padding: 0;
+     margin: 0;
+     outline: none;
+     /* para que no se vea el foco al hacer click */
+     box-shadow: none;
+ }
