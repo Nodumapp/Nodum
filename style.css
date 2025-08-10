@@ -1,7 +1,12 @@
  body {
      margin: 0;
      padding: 0;
+     font-family: "Manrope", sans-serif;
+     font-optical-sizing: auto;
+     font-style: normal;
  }
+
+
 
  /* Navbar sticky con rectángulo blanco */
  header {
@@ -29,6 +34,7 @@
  }
 
  .containerReg {
+    position: sticky;
      background-color: #ffffff;
      border: solid 0.5px;
      border-radius: 10px;
@@ -93,3 +99,25 @@
      /* para que no se vea el foco al hacer click */
      box-shadow: none;
  }
+ .container-cards {
+  padding: 20px;
+  display: flex;
+  gap: 20px; /* separa horizontalmente las cards */
+  
+}
+
+.card {
+  flex: 1; /* para que todas las cards tengan el mismo ancho */
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.card img {
+  height: 200px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
