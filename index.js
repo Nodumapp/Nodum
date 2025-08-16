@@ -28,6 +28,24 @@ document.addEventListener("DOMContentLoaded", () => {
             btn_select_plan: "Seleccionar plan",
             btn_selected: "Seleccionado",
             label_popular: "Popular",
+            features_title: "Caracteristicas principales",
+            plan_basic_feat1: "1 módulo activo",
+            plan_basic_feat2: "Hasta 3 usuarios",
+            plan_basic_feat3: "Soporte por correo electrónico",
+            plan_basic_feat4: "Acceso a actualizaciones básicas",
+            plan_basic_feat5: "Panel de control centralizado",
+
+            plan_pro_feat1: "Hasta 5 módulos activos",
+            plan_pro_feat2: "Incluye 10 usuarios",
+            plan_pro_feat3: "Exportación de datos e informes",
+            plan_pro_feat4: "Soporte prioritario por chat y correo electrónico",
+            plan_pro_feat5: "Personalización básica de la interfaz",
+
+            plan_enterprise_feat1: "Módulos ilimitados",
+            plan_enterprise_feat2: "Usuarios ilimitados",
+            plan_enterprise_feat3: "Soporte 24/7 con gerente de cuenta dedicado",
+            plan_enterprise_feat4: "Onboarding y capacitación en la empresa",
+            plan_enterprise_feat5: "Exportaciones programadas: envío automático de informes por correo electrónico",
             faq_title: "Preguntas Frecuentes (FAQ)",
             faq_subtitle: "Todo lo que tenés que saber para empezar",
             faq1_q: "¿Qué es Nodum y cómo funciona?",
@@ -64,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ecosystem_title: "An ecosystem of solutions you can activate when needed.",
             ecosystem_desc: "In Nodum, each module is an independent tool you can activate whenever you need it. No intermediaries, no complex integrations, no waiting for permissions.",
             label_popular: "Popular",
+            features_title: "Key Features",
             faq_title: "Frequently Asked Questions (FAQ)",
             faq_subtitle: "Everything you need to know to get started",
             faq1_q: "What is Nodum and how does it work?",
@@ -74,119 +93,120 @@ document.addEventListener("DOMContentLoaded", () => {
             faq3_a: "Yes, you can switch anytime.",
             faq4_q: "What technical support do you offer?",
             faq4_a: "Email, chat and phone support.",
-             plan_basic_feat1: "1 active module",
-      plan_basic_feat2: "Up to 3 users",
-      plan_basic_feat3: "Email support",
-      plan_basic_feat4: "Access to basic updates",
-      plan_basic_feat5: "Centralized dashboard",
-      plan_pro_feat1: "Up to 5 active modules",
-      plan_pro_feat2: "10 users included",
-      plan_pro_feat3: "Data and report export",
-      plan_pro_feat4: "Priority support via chat and email",
-      plan_pro_feat5: "Basic interface customization",
-      plan_enterprise_feat1: "Unlimited modules",
-      plan_enterprise_feat2: "Unlimited users",
-      plan_enterprise_feat3: "24/7 support with dedicated account manager",
-      plan_enterprise_feat4: "Onboarding and in-company training",
-      plan_enterprise_feat5: "Scheduled exports: automatic report delivery via email"
+            plan_basic_feat1: "1 active module",
+            plan_basic_feat2: "Up to 3 users",
+            plan_basic_feat3: "Email support",
+            plan_basic_feat4: "Access to basic updates",
+            plan_basic_feat5: "Centralized dashboard",
+            plan_pro_feat1: "Up to 5 active modules",
+            plan_pro_feat2: "10 users included",
+            plan_pro_feat3: "Data and report export",
+            plan_pro_feat4: "Priority support via chat and email",
+            plan_pro_feat5: "Basic interface customization",
+            plan_enterprise_feat1: "Unlimited modules",
+            plan_enterprise_feat2: "Unlimited users",
+            plan_enterprise_feat3: "24/7 support with dedicated account manager",
+            plan_enterprise_feat4: "Onboarding and in-company training",
+            plan_enterprise_feat5: "Scheduled exports: automatic report delivery via email"
         }
     };
 
+    // 🔹 Elementos DOM
     const btnMensual = document.getElementById('btnMensual');
-const btnAnual = document.getElementById('btnAnual');
-const descuentoAnual = document.getElementById('descAhorro');
+    const btnAnual = document.getElementById('btnAnual');
+    const descAhorro = document.getElementById('descAhorro');
 
-// Precios para mensual y anual
-const precios = {
-    mensual: {
-        basico: '$45.000',
-        pro: '$60.000 ARS',
-        empresarial: '$80.000 ARS'
-    },
-    anual: {
-        basico: '$351.000',
-        pro: '$468.000 ARS',
-        empresarial: '$624.000 ARS'
+    const btnBasico = document.getElementById('btnBasico');
+    const btnPro = document.getElementById('btnPro');
+    const btnEmpresarial = document.getElementById('btnEmpresarial');
+
+    const precioBasico = document.getElementById('precioBasico');
+    const precioPro = document.getElementById('precioPro');
+    const precioEmpresarial = document.getElementById('precioEmpresarial');
+
+    const btnsPlanes = [btnBasico, btnPro, btnEmpresarial];
+    const planes = document.querySelectorAll('.plan');
+    const botones = document.querySelectorAll('.btn-plan');
+
+    // 🔹 Precios originales en ARS
+    const preciosARS = {
+        mensual: { basico: '$45.000 ARS', pro: '$60.000 ARS', empresarial: '$80.000 ARS' },
+        anual: { basico: '$351.000 ARS', pro: '$468.000 ARS', empresarial: '$624.000 ARS' }
+    };
+
+    // 🔹 Precios en USD
+    const preciosUSD = {
+        mensual: { basico: '$45 USD', pro: '$60 USD', empresarial: '$80 USD' },
+        anual: { basico: '$351 USD', pro: '$468 USD', empresarial: '$624 USD' }
+    };
+
+    // 🔹 Función para actualizar precios
+    function actualizarPrecios(tipo) {
+        const preciosActuales = currentLang === 'en' ? preciosUSD : preciosARS;
+
+        if (tipo === 'mensual') {
+            btnMensual.classList.add('active');
+            btnAnual.classList.remove('active');
+            precioBasico.textContent = preciosActuales.mensual.basico;
+            precioPro.textContent = preciosActuales.mensual.pro;
+            precioEmpresarial.textContent = preciosActuales.mensual.empresarial;
+            descAhorro.style.display = 'none';
+        } else {
+            btnAnual.classList.add('active');
+            btnMensual.classList.remove('active');
+            precioBasico.textContent = preciosActuales.anual.basico;
+            precioPro.textContent = preciosActuales.anual.pro;
+            precioEmpresarial.textContent = preciosActuales.anual.empresarial;
+            descAhorro.style.display = 'block';
+        }
     }
-};
 
-// Botones seleccionar plan
-const btnBasico = document.getElementById('btnBasico');
-const btnPro = document.getElementById('btnPro');
-const btnEmpresarial = document.getElementById('btnEmpresarial');
+    // 🔹 Inicializa con mensual
+    actualizarPrecios('mensual');
 
-// Precio elementos
-const precioBasico = document.getElementById('precioBasico');
-const precioPro = document.getElementById('precioPro');
-const precioEmpresarial = document.getElementById('precioEmpresarial');
+    // 🔹 Cambiar periodo
+    btnMensual.addEventListener('click', () => { currentPeriod = 'mensual'; actualizarPrecios('mensual'); });
+    btnAnual.addEventListener('click', () => { currentPeriod = 'anual'; actualizarPrecios('anual'); });
 
-// Función para actualizar precios
-function actualizarPrecios(tipo) {
-    if (tipo === 'mensual') {
-        btnMensual.classList.add('active');
-        btnAnual.classList.remove('active');
-        precioBasico.textContent = precios.mensual.basico;
-        precioPro.textContent = precios.mensual.pro;
-        precioEmpresarial.textContent = precios.mensual.empresarial;
-        descAhorro.style.display = 'none';  // Oculta el texto
-    } else {
-        btnAnual.classList.add('active');
-        btnMensual.classList.remove('active');
-        precioBasico.textContent = precios.anual.basico;
-        precioPro.textContent = precios.anual.pro;
-        precioEmpresarial.textContent = precios.anual.empresarial;
-        descAhorro.style.display = 'block'; // Muestra el texto
-    }
-}
-
-// Cambiar active del switch y actualizar precios
-btnMensual.addEventListener('click', () => actualizarPrecios('mensual'));
-btnAnual.addEventListener('click', () => actualizarPrecios('anual'));
-
-// Inicializa con mensual
-actualizarPrecios('mensual');
-
-// Funcionalidad para seleccionar plan (opcional)
-const btnsPlanes = [btnBasico, btnPro, btnEmpresarial];
-btnsPlanes.forEach(btn => {
-    btn.addEventListener('click', () => {
-        btnsPlanes.forEach(b => {
-            b.classList.remove('selected');
-            b.textContent = "Seleccionar plan";
-            b.nextElementSibling.textContent = "";
-            b.style.cursor = 'pointer';
+    // 🔹 Selección de plan
+    btnsPlanes.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btnsPlanes.forEach(b => {
+                b.classList.remove('selected');
+                b.textContent = translations[currentLang].btn_select_plan;
+                b.nextElementSibling.textContent = "";
+                b.style.cursor = 'pointer';
+            });
+            btn.classList.add('selected');
+            btn.textContent = translations[currentLang].btn_selected;
+            btn.nextElementSibling.textContent = currentLang === 'en' ? "Hire now!" : "¡Contratar ahora!";
+            btn.style.cursor = 'default';
         });
-        btn.classList.add('selected');
-        btn.textContent = "Seleccionado";
-        btn.nextElementSibling.textContent = "¡Contratar ahora!";
-        btn.style.cursor = 'default';
-    });
-});
-const planes = document.querySelectorAll('.plan');
-const botones = document.querySelectorAll('.btn-plan');
-
-botones.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    // Quitar selección de todos
-    planes.forEach((plan) => plan.classList.remove('selected'));
-    botones.forEach((b) => {
-      b.textContent = 'Seleccionar plan';
-      b.classList.remove('activo');
     });
 
-    // Agregar selección al plan clickeado
-    const plan = btn.closest('.plan');
-    plan.classList.add('selected');
-    btn.textContent = 'Seleccionado';
-    btn.classList.add('activo');
-  });
-});
-document.querySelectorAll('.faq-question').forEach(q => {
-  q.addEventListener('click', () => {
-    const item = q.parentElement;
-    item.classList.toggle('active');
-  });
-});
+    botones.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            planes.forEach((plan) => plan.classList.remove('selected'));
+            botones.forEach((b) => {
+                b.textContent = translations[currentLang].btn_select_plan;
+                b.classList.remove('activo');
+            });
+
+            const plan = btn.closest('.plan');
+            plan.classList.add('selected');
+            btn.textContent = translations[currentLang].btn_selected;
+            btn.nextElementSibling.textContent = currentLang === 'en' ? "Hire now!" : "¡Contratar ahora!";
+            btn.classList.add('activo');
+        });
+    });
+
+    // 🔹 FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', () => {
+            const item = q.parentElement;
+            item.classList.toggle('active');
+        });
+    });
 
     // 🔹 Traducción dinámica
     function loadTranslations(lang) {
@@ -196,14 +216,17 @@ document.querySelectorAll('.faq-question').forEach(q => {
             if (translations[lang][key]) el.innerHTML = translations[lang][key];
         });
 
-        // Actualiza texto de planes seleccionados
         btnsPlanes.forEach(btn => {
             if (btn.classList.contains('selected')) {
                 btn.textContent = translations[lang].btn_selected;
+                btn.nextElementSibling.textContent = lang === 'en' ? "Hire now!" : "¡Contratar ahora!";
             } else {
                 btn.textContent = translations[lang].btn_select_plan;
+                btn.nextElementSibling.textContent = "";
             }
         });
+
+        actualizarPrecios(currentPeriod);
     }
 
     // 🔹 Cambio de idioma con banderas
