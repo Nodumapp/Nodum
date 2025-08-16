@@ -324,6 +324,7 @@ html, body {
     max-width: 1000px; /* Más ancho, podés usar 100% si querés que ocupe todo */
     margin: 0 auto; /* Centrar en la página */
     padding: 0 20px; /* Separación de los bordes de la ventana */
+    margin-top: 50px;
 }
 
 
