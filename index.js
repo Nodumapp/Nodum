@@ -63,7 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
             footer_security: "Seguridad de la Información",
             footer_cookies: "Cookies",
             footer_rights: "Todos los derechos reservados.",
-            footer_legal:"Legales",
+            footer_legal: "Legales",
+            card4_title: "Agenda Inteligente",
+            card4_text: "Organiza tus reuniones y tareas de manera sencilla, con recordatorios automáticos y sincronización en todos tus dispositivos.",
+            card3_title: "Tienda Online",
+            card3_text: "Vende tus productos fácilmente con un sistema seguro, moderno y con opciones de pago integradas.",
+            card2_title: "Sistema de Gestión / ERP",
+            card2_text: "Controla tus procesos, equipos y recursos desde un solo lugar con reportes y análisis en tiempo real.",
+            card1_title: "Ecosistema Integrado",
+            card1_text: "Todas nuestras aplicaciones trabajan en conjunto. Agenda, gestión y ventas se sincronizan automáticamente para que tu negocio fluya sin fricciones.",
+
+
         },
         en: {
             nav_home: "Home",
@@ -121,7 +131,16 @@ document.addEventListener("DOMContentLoaded", () => {
             footer_security: "Information Security",
             footer_cookies: "Cookies",
             footer_rights: "All rights reserved.",
-            footer_legal:"Legals"
+            footer_legal: "Legals",
+            card4_title: "Smart Agenda",
+            card4_text: "Organize your meetings and tasks easily, with automatic reminders and synchronization across all your devices.",
+            card3_title: "Online Store",
+            card3_text: "Sell your products easily with a secure, modern system and integrated payment options.",
+            card2_title: "Management System / ERP",
+            card2_text: "Control your processes, teams, and resources from a single place with real-time reports and analytics.",
+            card1_title: "Integrated Ecosystem",
+            card1_text: "All our applications work together. Scheduling, management, and sales sync automatically so your business flows without friction.",
+
         }
     };
 
