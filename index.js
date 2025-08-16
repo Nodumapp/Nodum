@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
             btn_select_plan: "Seleccionar plan",
             btn_selected: "Seleccionado",
             label_popular: "Popular",
+            ecosystem_title: "Un ecosistema de soluciones activables según tu necesidad.",
+            ecosystem_desc: "En Nodum, cada modulo es una herramienta independiente que podes activar cuando lo necesitas. Sin intermediaros, sin integraciones complejas, sin esperar permisos.",
             features_title: "Caracteristicas principales",
             plan_basic_feat1: "1 módulo activo",
             plan_basic_feat2: "Hasta 3 usuarios",
@@ -49,13 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
             faq_title: "Preguntas Frecuentes (FAQ)",
             faq_subtitle: "Todo lo que tenés que saber para empezar",
             faq1_q: "¿Qué es Nodum y cómo funciona?",
-            faq1_a: "Nodum es una plataforma online que reúne diferentes herramientas...",
+            faq1_a: " Nodum es una plataforma online que reúne diferentes herramientas para que tu empresa trabaje de forma mas simple, rapida y sin depender de terceros",
             faq2_q: "¿Necesito conocimientos técnicos para usar Nodum?",
             faq2_a: "No, Nodum está diseñado para ser fácil de usar y no requiere conocimientos técnicos previos.",
             faq3_q: "¿Puedo cambiar de plan en cualquier momento?",
             faq3_a: "Sí, puedes cambiar cuando quieras...",
             faq4_q: "¿Qué soporte técnico ofrecen?",
-            faq4_a: "Soporte por email, chat y teléfono."
+            faq4_a: "Soporte por email, chat y teléfono.",
+            footer_terms: "Términos y Condiciones",
+            footer_privacy: "Política de Privacidad",
+            footer_security: "Seguridad de la Información",
+            footer_cookies: "Cookies",
+            footer_rights: "Todos los derechos reservados.",
+            footer_legal:"Legales",
         },
         en: {
             nav_home: "Home",
@@ -86,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
             faq_title: "Frequently Asked Questions (FAQ)",
             faq_subtitle: "Everything you need to know to get started",
             faq1_q: "What is Nodum and how does it work?",
-            faq1_a: "Nodum is an online platform that brings different tools together...",
+            faq1_a: "Nodum is an online platform that brings together different tools so your company can work more simply, quickly, and without relying on third parties",
             faq2_q: "Do I need technical knowledge to use Nodum?",
             faq2_a: "No, Nodum is designed to be easy to use.",
             faq3_q: "Can I change my plan at any time?",
@@ -107,7 +115,13 @@ document.addEventListener("DOMContentLoaded", () => {
             plan_enterprise_feat2: "Unlimited users",
             plan_enterprise_feat3: "24/7 support with dedicated account manager",
             plan_enterprise_feat4: "Onboarding and in-company training",
-            plan_enterprise_feat5: "Scheduled exports: automatic report delivery via email"
+            plan_enterprise_feat5: "Scheduled exports: automatic report delivery via email",
+            footer_terms: "Terms and Conditions",
+            footer_privacy: "Privacy Policy",
+            footer_security: "Information Security",
+            footer_cookies: "Cookies",
+            footer_rights: "All rights reserved.",
+            footer_legal:"Legals"
         }
     };
 

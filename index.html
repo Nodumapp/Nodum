@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nodum</title>
+    <link rel="shortcut icon" href="./Images/android-chrome-512x512.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +19,7 @@
         <nav class="navbar navbar-expand-lg sticky-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="./Images/Nodum Logo solo color sin slogan.png" width="150" height="60" alt="Nodum Logo">
+                    <img src="./Images/Nodum Logo solo color sin slogan.png" width="150" height="60" alt="Nodum Logo" id="home">
                 </a>
                 <!-- Botón hamburguesa -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -30,16 +31,16 @@
                 <div class="collapse navbar-collapse " id="navbarNav">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 containerNav">
                         <li class="nav-item">
-                            <a class="nav-link active px-3" href="#" data-i18n="nav_home">Home</a>
+                            <a class="nav-link active px-3" href="#home" data-i18n="nav_home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-3" href="#" data-i18n="nav_solutions">Soluciones</a>
+                            <a class="nav-link px-3" href="#soluciones" data-i18n="nav_solutions">Soluciones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-3" href="#" data-i18n="nav_plans">Planes</a>
+                            <a class="nav-link px-3" href="#planes" data-i18n="nav_plans">Planes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-3" href="#" data-i18n="nav_faq">FAQs</a>
+                            <a class="nav-link px-3" href="#faqs" data-i18n="nav_faq">FAQs</a>
                         </li>
                     </ul>
                     <div class="d-flex containerReg">
@@ -93,7 +94,7 @@
                     necesitas. Sin intermediaros, sin integraciones complejas, sin esperar permisos.</p>
             </div>
         </div>
-        <section>
+        <section id="soluciones">
             <div class="row row-cols-1 row-cols-md-4 g-3 cards mx-auto">
                 <div class="col">
                     <div class="card h-100">
@@ -151,7 +152,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="planes">
             <div class="row g-2 justify-content-center">
                 <div class="col-12 col-md-auto">
                     <button id="btnMensual" class="switch-btn active btn btn-lg w-100"
@@ -236,7 +237,7 @@
                 </div>
             </div>
         </section>
-        <section class="faq-section">
+        <section class="faq-section" id="faqs">
             <h2 data-i18n="faq_title">Preguntas Frecuentes (FAQ)</h2>
             <p class="faq-subtitle" data-i18n="faq_subtitle">Todo lo que tenés que saber para empezar</p>
 
